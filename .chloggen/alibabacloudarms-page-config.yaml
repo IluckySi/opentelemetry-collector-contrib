@@ -1,0 +1,6 @@
+change_type: breaking
+component: receiver/alibabacloudarms
+note: Replace the `search` configuration block with `page` pagination settings and remove `search.only_errors`.
+issues: []
+subtext: ""
+change_logs: [user]

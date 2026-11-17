@@ -1,0 +1,46 @@
+{
+  "asapiSuccess": true,
+  "RequestId": "test-trace-request",
+  "Spans": [
+    {
+      "ParentSpanId": "",
+      "ServiceIp": "192.0.2.11",
+      "OperationName": "/api/example",
+      "RpcType": 0,
+      "Duration": 30024,
+      "TagEntryList": [
+        {"Value": "500", "Key": "http.status.code"},
+        {"Value": "192.0.2.12", "Key": "source.ip"},
+        {"Value": "test-region", "Key": "region"}
+      ],
+      "Timestamp": 1700000000000,
+      "HaveStack": true,
+      "LogEventList": [],
+      "ServiceName": "test-frontend",
+      "RpcId": "0",
+      "TraceID": "0123456789abcdef0123456789abcdef",
+      "ResultCode": "1",
+      "SpanId": "1111111111111111"
+    },
+    {
+      "ParentSpanId": "1111111111111111",
+      "ServiceIp": "192.0.2.10",
+      "OperationName": "/api/items",
+      "RpcType": 0,
+      "Duration": 30019,
+      "TagEntryList": [
+        {"Value": "500", "Key": "http.status.code"},
+        {"Value": "192.0.2.11", "Key": "source.ip"},
+        {"Value": "test-region", "Key": "region"}
+      ],
+      "Timestamp": 1700000000009,
+      "HaveStack": true,
+      "LogEventList": [],
+      "ServiceName": "test-backend",
+      "RpcId": "0.1",
+      "TraceID": "0123456789abcdef0123456789abcdef",
+      "ResultCode": "1",
+      "SpanId": "2222222222222222"
+    }
+  ]
+}

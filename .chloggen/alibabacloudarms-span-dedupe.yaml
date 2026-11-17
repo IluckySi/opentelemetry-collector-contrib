@@ -1,0 +1,6 @@
+change_type: enhancement
+component: receiver/alibabacloudarms
+note: Deduplicate exported spans by TraceID and SpanID to collect late-arriving spans on subsequent polls.
+issues: []
+subtext: ""
+change_logs: [user]

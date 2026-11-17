@@ -1,0 +1,6 @@
+change_type: breaking
+component: receiver/alibabacloudarms
+note: Default the query end to three minutes behind the current time, disable window overlap by default, and use fixed lookback limits.
+subtext: "Set `query_delay: 0s` and `overlap_slack: 30s` to retain the previous timing. The `lookback` and `max_lookback` options are removed."
+issues: []
+change_logs: [user]

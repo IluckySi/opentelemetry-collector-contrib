@@ -1,0 +1,19 @@
+type: alibabacloudarms
+
+status:
+  class: receiver
+  stability:
+    development: [traces]
+  distributions: []
+  codeowners:
+    active: []
+
+tests:
+  config:
+    endpoint: arms-api.example.com
+    region_id: test-region
+    access_key_id: test-ak
+    access_key_secret: test-sk
+    organization_id: org-test
+    resource_group_id: rs-test
+    services: [demo-service]

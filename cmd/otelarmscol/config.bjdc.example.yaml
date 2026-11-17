@@ -1,0 +1,48 @@
+receivers:
+  alibabacloudarms:
+    endpoint: arms-api.res.sgmc.sgcc.com.cn
+    region_id: bjdc-1
+    scheme: http
+    api_version: "2019-08-08"
+
+    access_key_id: ${env:ARMS_ACCESS_KEY_ID}
+    access_key_secret: ${env:ARMS_ACCESS_KEY_SECRET}
+    organization_id: ${env:ARMS_ORG_ID}
+    resource_group_id: ${env:ARMS_RESOURCE_GROUP_ID}
+
+    collection_interval: 30s
+    initial_delay: 1s
+    query_delay: 3m
+    overlap_slack: 0s
+
+    services:
+      - xtbg-pt-portal-area3
+
+    page:
+      page_size: 100
+      max_page: 10
+
+    stack:
+      enabled: false
+
+    http:
+      timeout: 30s
+
+processors:
+  batch:
+    timeout: 5s
+
+exporters:
+  debug:
+    verbosity: detailed
+  otlp:
+    endpoint: ${env:OTLP_ENDPOINT}
+    tls:
+      insecure: true
+
+service:
+  pipelines:
+    traces:
+      receivers: [alibabacloudarms]
+      processors: [batch]
+      exporters: [debug, otlp]

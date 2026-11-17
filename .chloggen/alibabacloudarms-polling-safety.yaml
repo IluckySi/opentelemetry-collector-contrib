@@ -1,0 +1,6 @@
+change_type: bug_fix
+component: receiver/alibabacloudarms
+note: Prevent silent data loss when ARMS pagination is saturated or API calls return unsuccessful responses; skip and log empty trace details.
+issues: []
+subtext: ""
+change_logs: [user]

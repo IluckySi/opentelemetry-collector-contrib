@@ -1,0 +1,18 @@
+{
+  "asapiSuccess": true,
+  "RequestId": "test-request",
+  "PageBean": {
+    "PageSize": 100,
+    "PageNumber": 1,
+    "Total": 1,
+    "TraceInfos": [
+      {
+        "TraceID": "0123456789abcdef0123456789abcdef",
+        "ServiceName": "test-frontend",
+        "OperationName": "/api/example",
+        "Duration": 30024,
+        "Timestamp": 1700000000000
+      }
+    ]
+  }
+}
